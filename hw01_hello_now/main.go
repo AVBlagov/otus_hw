@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-
 	fmt.Println("current time:", time.Now().Round(0))
 
 	t, err := ntp.Time("ntp1.vniiftri.ru")

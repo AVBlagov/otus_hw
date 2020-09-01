@@ -10,9 +10,9 @@ import (
 
 //List of ntp servers
 const (
-	rupool     = "ru.pool.ntp.org"
-	beevikpool = "0.beevik-ntp.pool.ntp.org"
-	vniiftri   = "ntp1.vniiftri.ru"
+	//rupool     = "ru.pool.ntp.org"
+	//beevikpool = "0.beevik-ntp.pool.ntp.org"
+	vniiftri = "ntp1.vniiftri.ru"
 )
 
 func main() {

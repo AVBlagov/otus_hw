@@ -18,5 +18,4 @@ func main() {
 	} else {
 		fmt.Println("exact time:", t.Round(0))
 	}
-
 }

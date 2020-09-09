@@ -37,9 +37,13 @@ func Unpack(str string) (string, error) {
 				ustring.WriteString(string(runes))
 			} else {
 				ustring.WriteString(strings.Repeat(string(prev), num-1))
-				prev = cur
 			}
+			prev = cur
 		case i > 0 && unicode.IsDigit(cur) && unicode.IsDigit(prev):
+			num, _ := strconv.Atoi(string(prev))
+			if num == 0 {
+				return "", ErrZeroRune
+			}
 			return "", ErrInvalidString
 		case i > 0 && !unicode.IsDigit(cur):
 			prev = cur

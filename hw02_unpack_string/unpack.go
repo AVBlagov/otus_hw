@@ -11,7 +11,7 @@ import (
 var ErrInvalidString = errors.New("invalid string")
 
 // ErrZeroRune - zero rune with int.
-var ErrZeroRune = errors.New("Zero rune with int")
+var ErrZeroRune = errors.New("zero rune with int")
 
 // Unpack - func.
 func Unpack(str string) (string, error) {
@@ -44,7 +44,6 @@ func Unpack(str string) (string, error) {
 		case i > 0 && !unicode.IsDigit(cur):
 			prev = cur
 			ustring.WriteString(string(cur))
-
 		}
 	}
 

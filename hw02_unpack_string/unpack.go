@@ -7,19 +7,19 @@ import (
 	"unicode"
 )
 
-// ErrInvalidString - error
+// ErrInvalidString - error.
 var ErrInvalidString = errors.New("invalid string")
 
-//ErrZeroRune - zero rune with intпш
+// ErrZeroRune - zero rune with int.
 var ErrZeroRune = errors.New("Zero rune with int")
 
-//Unpack - func
+// Unpack - func.
 func Unpack(str string) (string, error) {
 	var ustring strings.Builder
 	var prev rune
 	var temp = []rune(str)
-	for i, cur := range temp {
 
+	for i, cur := range temp {
 		switch {
 		case i == 0 && unicode.IsDigit(cur):
 			return "", ErrInvalidString
